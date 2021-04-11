@@ -1,0 +1,134 @@
+/**
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Cyan: hsl(179, 62%, 43%)
+- Bright Yellow: hsl(71, 73%, 54%)
+
+### Neutral
+
+- Light Gray: hsl(204, 43%, 93%)
+- Grayish Blue: hsl(218, 22%, 67%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 16px
+
+### Font
+
+- Family: [Karla](https://fonts.google.com/specimen/Karla)
+- Weights: 400, 700
+**/
+body{
+  padding: 0px;
+  background-color: hsl(204, 43%, 93%);
+}
+#container{
+  position: absolute;
+  display: grid;
+  grid-template-areas:
+  'upper-part upper-part'
+  'left-lower right-lower';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 640px;
+  max-width: 100%;
+  padding: 20px;
+}
+#container #upper-part{
+  grid-area: upper-part;
+  padding: 30px;
+  background-color: #fff;
+  font-family: 'Karla', sans-serif;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+#container .bottom-part{
+  font-family: 'Karla', sans-serif;
+  padding: 30px;
+}
+#container .bottom-part h3{
+  font-weight: 700;
+  color: #fff;
+  font-size: 16px;
+}
+#container .bottom-part p{
+  font-weight: 400;
+  color: #fff;
+  font-size: 16px;
+}
+#container #upper-part h2{
+  font-weight: 700;
+  color: hsl(179, 62%, 43%);
+}
+#container #upper-part #upper-part-green-p{
+  font-weight: 700;
+  color: hsl(71, 73%, 54%);
+  font-size: 16px;
+}
+#container #upper-part #upper-part-grey-p{
+  font-weight: 400;
+  color: hsl(218, 22%, 67%);
+  font-size: 16px;
+}
+#container #left-bottom-part{
+  grid-area: left-lower;
+  background-color: hsl(179, 62%, 43%);
+  border-bottom-left-radius: 6px;
+}
+#container #left-bottom-part #price-month #price{
+  margin-right: 8px;
+  font-size: 30px;
+  font-weight: 700;
+}
+#container #left-bottom-part button{
+  display: block;
+  color: #fff;
+  font-family: 'Karla', sans-serif;
+  background-color: hsl(71, 73%, 54%);
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid hsl(71, 73%, 54%);
+  width: 80%;
+  height: 45px;
+  cursor: pointer;
+}
+#container #right-bottom-part{
+  grid-area: right-lower;
+  background-color: hsl(180, 62%, 47%);
+  border-bottom-right-radius: 6px;
+}
+@media (max-width: 670px){
+  #container{
+    position: static;
+    display: block;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    margin: 50px auto 50px auto;
+    width: 80%;
+  }
+  #container #upper-part h2{
+    font-size: 16px;
+  }
+  #container #left-bottom-part{
+    border-bottom-left-radius: 0px;
+  }
+  #container #right-bottom-part{
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+}
